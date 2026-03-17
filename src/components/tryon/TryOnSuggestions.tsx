@@ -45,7 +45,7 @@ const TryOnSuggestions = ({ necklaces, selectedNecklace, favorites, onSelect, on
                   <Heart className={`w-5 h-5 transition-colors ${favorites.has(n.id) ? "text-red-500 fill-red-500" : "text-muted-foreground/50 group-hover:text-red-400"}`} />
                 </button>
                 <div className="bg-cream aspect-[3/4]"><img src={n.image} alt={n.nameVi} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" /></div>
-                <div className="p-2.5 bg-card font-mono text-xs px-0 py-0 my-0"><p className="font-body text-xs font-medium text-foreground truncate">{n.name}</p><p className="font-body text-xs font-bold text-primary mt-0.5">{n.priceDisplay}</p></div>
+                <div className="p-2.5 bg-card font-mono text-xs"><p className="font-body text-xs font-medium text-foreground truncate">{n.name}</p><p className="font-body text-xs font-bold text-primary mt-0.5">{n.priceDisplay}</p></div>
               </div>);
 
           })}
