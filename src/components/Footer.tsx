@@ -61,7 +61,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-12 pt-8 text-center">
-          <p className="font-body text-sm text-primary-foreground/50">
+          <p className="text-sm text-primary-foreground/50 font-sans">
             © 2026 Luna Jewel. Bảo lưu mọi quyền.
           </p>
         </div>
