@@ -96,15 +96,15 @@ const Collections = () => {
         <div className="absolute bottom-0 left-0 right-0 pb-2">
           <div className="container mx-auto px-4 md:px-16 flex gap-12">
             <div>
-              <p className="font-display text-2xl font-bold text-primary md:text-3xl">24/7</p>
+              <p className="text-2xl font-bold text-primary md:text-3xl font-mono">24/7</p>
               <p className="font-body text-xs text-primary-foreground/70">Hỗ Trợ Khách Hàng</p>
             </div>
             <div>
-              <p className="font-display text-2xl font-bold text-primary md:text-3xl">7 Ngày</p>
+              <p className="text-2xl font-bold text-primary md:text-3xl font-mono">7 Ngày</p>
               <p className="font-body text-xs text-primary-foreground/70">Miễn Phí Đổi Trả</p>
             </div>
             <div>
-              <p className="font-display text-2xl font-bold text-primary md:text-3xl">5<Star className="w-4 h-4 inline text-primary ml-0.5 -mt-1" /></p>
+              <p className="text-2xl font-bold text-primary md:text-3xl font-mono">5<Star className="w-4 h-4 inline text-primary ml-0.5 -mt-1" /></p>
               <p className="font-body text-xs text-primary-foreground/70">Đánh Giá</p>
             </div>
           </div>
@@ -245,7 +245,7 @@ const CollectionsCarousel = ({ products, onAddToCart
                 </Link>
                 <div className="mt-4 text-center">
                   <h3 className="font-display text-lg font-semibold">{col.name}</h3>
-                  <p className="font-body text-primary text-sm font-medium mt-1">{col.priceDisplay}</p>
+                  <p className="text-primary font-medium mt-1 text-base font-mono">{col.priceDisplay}</p>
                   <div className="grid grid-cols-2 gap-2">
                     <button onClick={() => onAddToCart(col)} className="btn-outline-gold text-xs px-4 py-2 w-full">
                       <ShoppingCart className="w-3 h-3 inline mr-1" /> Thêm Vào Giỏ
