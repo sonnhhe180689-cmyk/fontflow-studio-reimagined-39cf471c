@@ -96,15 +96,15 @@ const Collections = () => {
         <div className="absolute bottom-0 left-0 right-0 pb-2">
           <div className="container mx-auto px-4 md:px-16 flex gap-12">
             <div>
-              <p className="font-display text-2xl font-bold text-primary md:text-2xl">24/7</p>
+              <p className="font-display text-2xl font-bold text-primary md:text-3xl">24/7</p>
               <p className="font-body text-xs text-primary-foreground/70">Hỗ Trợ Khách Hàng</p>
             </div>
             <div>
-              <p className="font-display text-2xl font-bold text-primary md:text-2xl">7 Ngày</p>
+              <p className="font-display text-2xl font-bold text-primary md:text-3xl">7 Ngày</p>
               <p className="font-body text-xs text-primary-foreground/70">Miễn Phí Đổi Trả</p>
             </div>
             <div>
-              <p className="font-display text-2xl font-bold text-primary md:text-2xl">5<Star className="w-4 h-4 inline text-primary ml-0.5 -mt-1" /></p>
+              <p className="font-display text-2xl font-bold text-primary md:text-3xl">5<Star className="w-4 h-4 inline text-primary ml-0.5 -mt-1" /></p>
               <p className="font-body text-xs text-primary-foreground/70">Đánh Giá</p>
             </div>
           </div>
