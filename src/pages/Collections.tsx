@@ -93,7 +93,7 @@ const Collections = () => {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-8 left-0 right-0">
+        <div className="absolute bottom-0 left-0 right-0 pb-2">
           <div className="container mx-auto px-4 md:px-16 flex gap-12">
             <div>
               <p className="font-display text-2xl font-bold text-primary md:text-2xl">24/7</p>
