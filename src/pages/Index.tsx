@@ -181,7 +181,7 @@ const FeaturedCarousel = ({ products, onAddToCart }: {products: typeof import("@
                 </Link>
                 <div className="mt-4 text-center">
                   <h3 className="font-display text-lg font-semibold">{product.name}</h3>
-                  <p className="text-primary font-medium mt-1 font-mono text-base">{product.priceDisplay}</p>
+                  <p className="mt-1 font-mono text-base text-secondary-foreground my-0 bg-primary-foreground font-bold">{product.priceDisplay}</p>
                   <div className="grid grid-cols-2 gap-2">
                     <button onClick={() => onAddToCart(product)} className="btn-outline-gold text-xs px-4 py-2 w-full">
                       <ShoppingCart className="w-3 h-3 inline mr-1" /> Thêm Vào Giỏ
