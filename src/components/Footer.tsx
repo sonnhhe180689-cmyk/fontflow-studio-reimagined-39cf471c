@@ -39,7 +39,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-primary" />
-                <span className="font-body text-sm text-primary-foreground/70">0901 234 567</span>
+                <span className="text-primary-foreground font-thin font-mono text-sm mx-0 my-0">0901 234 567</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-primary" />
@@ -54,7 +54,7 @@ const Footer = () => {
               <Clock className="w-4 h-4 mt-0.5 text-primary" />
               <div className="font-body text-sm text-primary-foreground/70">
                 <p>Thứ 2 - Chủ Nhật</p>
-                <p>9:00 - 21:00</p>
+                <p className="font-mono">9:00 - 21:00</p>
               </div>
             </div>
           </div>
@@ -66,8 +66,8 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>);
+
 };
 
 export default Footer;

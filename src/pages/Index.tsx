@@ -12,10 +12,10 @@ import { useState, useRef, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 
 const services = [
-  { title: "Đặt lịch hẹn", desc: "Nắm vững nghệ thuật tặng quà mùa lễ hội với cuộc hẹn riêng tại cửa hàng.", cta: "Đặt Lịch Hẹn", link: "/lien-he", image: serviceAppointment },
-  { title: "Cá nhân hóa", desc: "Hãy làm cho thiết kế trở nên đáng nhớ hơn nữa với dịch vụ khắc laser theo yêu cầu.", cta: "Tìm Hiểu Thêm", link: "/huong-dan", image: servicePersonalize },
-  { title: "Liên hệ với chúng tôi", desc: "Từ tư vấn quà tặng phù hợp đến việc sắp xếp cuộc hẹn mua sắm, chúng tôi luôn sẵn sàng.", cta: "Tìm Hiểu Thêm", link: "/lien-he", image: serviceContact },
-];
+{ title: "Đặt lịch hẹn", desc: "Nắm vững nghệ thuật tặng quà mùa lễ hội với cuộc hẹn riêng tại cửa hàng.", cta: "Đặt Lịch Hẹn", link: "/lien-he", image: serviceAppointment },
+{ title: "Cá nhân hóa", desc: "Hãy làm cho thiết kế trở nên đáng nhớ hơn nữa với dịch vụ khắc laser theo yêu cầu.", cta: "Tìm Hiểu Thêm", link: "/huong-dan", image: servicePersonalize },
+{ title: "Liên hệ với chúng tôi", desc: "Từ tư vấn quà tặng phù hợp đến việc sắp xếp cuộc hẹn mua sắm, chúng tôi luôn sẵn sàng.", cta: "Tìm Hiểu Thêm", link: "/lien-he", image: serviceContact }];
+
 
 const YOUTUBE_VIDEO_ID = "JfXqt9WUPrs";
 
@@ -48,19 +48,19 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { icon: "💎", title: "Chất Lượng Cao Cấp", desc: "Nguyên liệu thật 100%, được chứng nhận bởi các tổ chức uy tín" },
-              { icon: "🚚", title: "Giao Hàng Toàn Quốc", desc: "Miễn phí ship cho đơn hàng từ 2.000.000đ, giao trong 2-5 ngày" },
-              { icon: "🛡️", title: "Bảo Hành Trọn Đời", desc: "Cam kết đổi trả trong 30 ngày, bảo hành miễn phí trọn đời" },
-              { icon: "✨", title: "Thử Trước Khi Mua", desc: "Công nghệ thử vòng cổ 2D độc đáo, xem ngay trên ảnh của bạn" },
-            ].map((feature, i) => (
-              <div key={i} className="text-center">
+            { icon: "💎", title: "Chất Lượng Cao Cấp", desc: "Nguyên liệu thật 100%, được chứng nhận bởi các tổ chức uy tín" },
+            { icon: "🚚", title: "Giao Hàng Toàn Quốc", desc: "Miễn phí ship cho đơn hàng từ 2.000.000đ, giao trong 2-5 ngày" },
+            { icon: "🛡️", title: "Bảo Hành Trọn Đời", desc: "Cam kết đổi trả trong 30 ngày, bảo hành miễn phí trọn đời" },
+            { icon: "✨", title: "Thử Trước Khi Mua", desc: "Công nghệ thử vòng cổ 2D độc đáo, xem ngay trên ảnh của bạn" }].
+            map((feature, i) =>
+            <div key={i} className="text-center">
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">{feature.icon}</span>
                 </div>
                 <h3 className="font-display text-lg font-semibold mb-2">{feature.title}</h3>
                 <p className="font-body text-xs text-muted-foreground leading-relaxed">{feature.desc}</p>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -74,8 +74,8 @@ const Index = () => {
             <p className="font-body text-sm tracking-[0.3em] uppercase text-primary-foreground/80 mt-3">Tạo tác tinh xảo từng chi tiết</p>
             <button
               onClick={() => setShowVideo(true)}
-              className="mt-8 w-16 h-16 rounded-full border-2 border-primary-foreground/60 flex items-center justify-center mx-auto hover:border-primary-foreground hover:bg-primary-foreground/20 transition-all"
-            >
+              className="mt-8 w-16 h-16 rounded-full border-2 border-primary-foreground/60 flex items-center justify-center mx-auto hover:border-primary-foreground hover:bg-primary-foreground/20 transition-all">
+              
               <Play className="w-6 h-6 text-primary-foreground ml-1" />
             </button>
           </div>
@@ -83,22 +83,22 @@ const Index = () => {
       </section>
 
       {/* Video Modal */}
-      {showVideo && (
-        <div className="fixed inset-0 z-[70] flex items-center justify-center bg-foreground/80 backdrop-blur-sm" onClick={() => setShowVideo(false)}>
+      {showVideo &&
+      <div className="fixed inset-0 z-[70] flex items-center justify-center bg-foreground/80 backdrop-blur-sm" onClick={() => setShowVideo(false)}>
           <div className="relative w-full max-w-4xl mx-4 aspect-video" onClick={(e) => e.stopPropagation()}>
             <button onClick={() => setShowVideo(false)} className="absolute -top-10 right-0 text-primary-foreground hover:text-primary transition-colors">
               <X className="w-8 h-8" />
             </button>
             <iframe
-              className="w-full h-full rounded-xl"
-              src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1`}
-              title="Nghệ Thuật Chế Tác Vòng Cổ"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+            className="w-full h-full rounded-xl"
+            src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1`}
+            title="Nghệ Thuật Chế Tác Vòng Cổ"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen />
+          
           </div>
         </div>
-      )}
+      }
 
       {/* Story Section */}
       <section className="py-20 bg-background">
@@ -126,8 +126,8 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <h2 className="section-title text-center mb-12">Dịch Vụ Của Chúng Tôi</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {services.map((service, i) => (
-              <div key={i} className="bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            {services.map((service, i) =>
+            <div key={i} className="bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                 <div className="h-48 overflow-hidden">
                   <img src={service.image} alt={service.title} className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
                 </div>
@@ -139,7 +139,7 @@ const Index = () => {
                   </Link>
                 </div>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -158,12 +158,12 @@ const Index = () => {
           </Link>
         </div>
       </section>
-    </div>
-  );
+    </div>);
+
 };
 
 /* Carousel component for Featured Necklaces - 2 items per scroll */
-const FeaturedCarousel = ({ products, onAddToCart }: { products: typeof import("@/data/products").products; onAddToCart: (p: typeof import("@/data/products").products[0]) => void }) => {
+const FeaturedCarousel = ({ products, onAddToCart }: {products: typeof import("@/data/products").products;onAddToCart: (p: typeof import("@/data/products").products[0]) => void;}) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ align: "start", slidesToScroll: 2, loop: true });
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
@@ -173,15 +173,15 @@ const FeaturedCarousel = ({ products, onAddToCart }: { products: typeof import("
     <div className="relative">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex -ml-4">
-          {products.map((product) => (
-            <div key={product.id} className="min-w-0 shrink-0 grow-0 basis-1/2 md:basis-1/4 pl-4">
+          {products.map((product) =>
+          <div key={product.id} className="min-w-0 shrink-0 grow-0 basis-1/2 md:basis-1/4 pl-4">
               <div className="group cursor-pointer">
                 <Link to="/thu-vong-co" className="block overflow-hidden rounded-lg bg-card">
                   <img src={product.image} alt={product.name} className="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-110" />
                 </Link>
                 <div className="mt-4 text-center">
                   <h3 className="font-display text-lg font-semibold">{product.name}</h3>
-                  <p className="font-body text-primary text-sm font-medium mt-1">{product.priceDisplay}</p>
+                  <p className="text-primary text-sm font-medium mt-1 font-mono">{product.priceDisplay}</p>
                   <div className="grid grid-cols-2 gap-2">
                     <button onClick={() => onAddToCart(product)} className="btn-outline-gold text-xs px-4 py-2 w-full">
                       <ShoppingCart className="w-3 h-3 inline mr-1" /> Thêm Vào Giỏ
@@ -193,7 +193,7 @@ const FeaturedCarousel = ({ products, onAddToCart }: { products: typeof import("
                 </div>
               </div>
             </div>
-          ))}
+          )}
         </div>
       </div>
       <button onClick={scrollPrev} className="absolute left-0 top-1/3 -translate-y-1/2 -translate-x-4 w-10 h-10 rounded-full bg-card shadow-md flex items-center justify-center hover:bg-accent transition-colors z-10">
@@ -202,8 +202,8 @@ const FeaturedCarousel = ({ products, onAddToCart }: { products: typeof import("
       <button onClick={scrollNext} className="absolute right-0 top-1/3 -translate-y-1/2 translate-x-4 w-10 h-10 rounded-full bg-card shadow-md flex items-center justify-center hover:bg-accent transition-colors z-10">
         <ChevronRight className="w-5 h-5 text-foreground" />
       </button>
-    </div>
-  );
+    </div>);
+
 };
 
 export default Index;
