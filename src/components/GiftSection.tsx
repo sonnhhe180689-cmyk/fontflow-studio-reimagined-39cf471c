@@ -22,7 +22,7 @@ const GiftSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="section-title">Quà Tặng Tri Ân Khách Hàng</h2>
-          <p className="section-subtitle">​</p>
+          
           <p className="font-body text-muted-foreground mt-4 max-w-xl mx-auto text-base my-0">
             ​TẶNG KÈM 1 MÓN QUÀ NHỎ THAY LỜI CẢM ƠN CỦA LUNA JEWEL DÀNH TỚI CÁC KHÁCH HÀNG
           </p>
