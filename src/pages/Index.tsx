@@ -70,8 +70,8 @@ const Index = () => {
         <img src={craftsmanship} alt="Nghệ thuật chế tác" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-foreground/60 flex items-center justify-center">
           <div className="text-center">
-            <h2 className="font-heading text-4xl md:text-5xl text-primary-foreground">Nghệ Thuật Chế Tác Vòng Cổ</h2>
-            <p className="font-body text-sm tracking-[0.3em] uppercase text-primary-foreground/80 mt-3">Tạo tác tinh xảo từng chi tiết</p>
+            <h2 className="font-heading text-4xl text-primary-foreground md:text-6xl">Nghệ Thuật Chế Tác Vòng Cổ</h2>
+            <p className="font-body tracking-[0.3em] uppercase text-primary-foreground/80 mt-3 text-base">Tạo tác tinh xảo từng chi tiết</p>
             <button
               onClick={() => setShowVideo(true)}
               className="mt-8 w-16 h-16 rounded-full border-2 border-primary-foreground/60 flex items-center justify-center mx-auto hover:border-primary-foreground hover:bg-primary-foreground/20 transition-all">
