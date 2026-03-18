@@ -20,9 +20,9 @@ export default {
         sans: ['"Raleway"', 'sans-serif'],
       },
       fontSize: {
-        'hero': ['3.25rem', { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '700' }],
-        'section': ['1.875rem', { lineHeight: '1.2', letterSpacing: '0.01em', fontWeight: '600' }],
-        'base-ui': ['0.9375rem', { lineHeight: '1.65' }],
+        'title': ['3rem', { lineHeight: '1.15', letterSpacing: '-0.02em', fontWeight: '700' }],
+        'subtitle': ['1.5rem', { lineHeight: '1.3', letterSpacing: '0.01em', fontWeight: '600' }],
+        'body': ['0.9375rem', { lineHeight: '1.65', fontWeight: '300' }],
       },
       colors: {
         border: "hsl(var(--border))",
