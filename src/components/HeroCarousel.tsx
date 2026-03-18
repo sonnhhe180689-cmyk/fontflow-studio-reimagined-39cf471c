@@ -76,13 +76,13 @@ const HeroCarousel = () => {
               transitionDelay: "0.2s"
             }}>
             
-            <h1 className="text-4xl lg:text-7xl text-primary-foreground leading-[1.6] whitespace-pre-line md:text-6xl font-extrabold mx-0 px-0 font-serif">
+            <h1 className="text-title text-primary-foreground leading-[1.6] whitespace-pre-line font-bold font-display">
               {slides[current].title}
             </h1>
-            <p className="font-heading text-lg md:text-xl text-primary-foreground/90 mt-4">
+            <p className="font-heading text-subtitle text-primary-foreground/90 mt-4 font-semibold">
               {slides[current].subtitle}
             </p>
-            <button className="btn-gold mt-8 text-sm" onClick={() => navigate(slides[current].link)}>
+            <button className="btn-gold mt-8 text-body font-light" onClick={() => navigate(slides[current].link)}>
               {slides[current].cta}
             </button>
           </div>
@@ -95,13 +95,13 @@ const HeroCarousel = () => {
               transitionDelay: "0.3s"
             }}>
             
-            <h3 className="font-display text-xl md:text-2xl font-bold leading-tight drop-shadow-lg">
+            <h3 className="font-display text-subtitle font-bold leading-tight drop-shadow-lg">
               <span className="text-primary-foreground">Luna Jewel</span>
             </h3>
-            <p className="font-body text-xs text-primary-foreground/70 mt-1">{slides[current].cta}</p>
+            <p className="font-body text-body text-primary-foreground/70 mt-1 font-light">{slides[current].cta}</p>
             <button
               onClick={() => navigate(slides[current].link)}
-              className="mt-3 px-5 py-2 text-[10px] font-body font-medium tracking-wider text-primary-foreground rounded-full bg-gradient-to-r from-[hsl(170,45%,55%)] to-[hsl(185,50%,60%)] hover:from-[hsl(170,45%,50%)] hover:to-[hsl(185,50%,55%)] shadow-md hover:shadow-lg transition-all flex items-center gap-1">
+              className="mt-3 px-5 py-2 text-body font-body font-semibold tracking-wider text-primary-foreground rounded-full bg-gradient-to-r from-[hsl(170,45%,55%)] to-[hsl(185,50%,60%)] hover:from-[hsl(170,45%,50%)] hover:to-[hsl(185,50%,55%)] shadow-md hover:shadow-lg transition-all flex items-center gap-1">
               
               {slides[current].cta} <ArrowRight className="w-3 h-3" />
             </button>

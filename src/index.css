@@ -169,11 +169,11 @@
   }
 
   .section-title {
-    @apply font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground;
+    @apply font-display text-title font-bold text-foreground;
   }
 
   .section-subtitle {
-    @apply font-body text-sm md:text-base tracking-[0.2em] uppercase text-muted-foreground mt-2;
+    @apply font-body text-body tracking-[0.2em] uppercase text-muted-foreground mt-2;
   }
 
   .hero-overlay {
