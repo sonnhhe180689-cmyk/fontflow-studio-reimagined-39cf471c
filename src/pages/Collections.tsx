@@ -117,8 +117,8 @@ const Collections = () => {
           <div className="text-center mb-10">
             <h2 className="section-title">Bộ Sưu Tập Vòng Cổ</h2>
             <p className="section-subtitle">Khám phá vẻ đẹp tinh tế từ những thiết kế độc đáo</p>
-            <p className="font-body text-sm text-muted-foreground mt-4 max-w-xl mx-auto">
-              Chế tác thủ công từ nguyên liệu cao cấp hàng đầu
+            <p className="font-body text-sm text-muted-foreground mt-4 max-w-xl mx-auto my-0">
+              ​
             </p>
           </div>
           <div className="flex flex-col md:flex-row items-center gap-4 mb-10 justify-center">
