@@ -23,7 +23,7 @@ const GiftSection = () => {
         <div className="text-center mb-12">
           <h2 className="section-title">Quà Tặng Tri Ân Khách Hàng</h2>
           
-          <p className="font-body text-muted-foreground mt-4 max-w-xl mx-auto text-body my-0 font-light">
+          <p className="font-body text-muted-foreground mt-4 max-w-xl mx-auto text-base my-0">
             ​TẶNG KÈM 1 MÓN QUÀ NHỎ THAY LỜI CẢM ƠN CỦA LUNA JEWEL DÀNH TỚI CÁC KHÁCH HÀNG
           </p>
         </div>
@@ -34,7 +34,7 @@ const GiftSection = () => {
                 <img src={mysteryImages[index]} alt="Hộp quà bí ẩn" className="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-110" />
               </div>
               <div className="p-4 text-center">
-                <button onClick={() => handleAddToCart(gift)} className="btn-outline-gold text-body px-4 py-2 font-light">
+                <button onClick={() => handleAddToCart(gift)} className="btn-outline-gold text-xs px-4 py-2">
                   <ShoppingCart className="w-3 h-3 inline mr-1" /> Thêm Vào Giỏ
                 </button>
               </div>

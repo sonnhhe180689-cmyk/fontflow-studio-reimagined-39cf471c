@@ -9,13 +9,13 @@ const tips = [
 
 const TryOnTips = () => (
   <div className="bg-card rounded-2xl shadow-lg p-6">
-    <h3 className="font-display text-subtitle font-bold text-foreground mb-6 text-center">Mẹo Thử Vòng Cổ</h3>
+    <h3 className="font-display text-xl font-bold text-foreground mb-6 text-center">Mẹo Thử Vòng Cổ</h3>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
       {tips.map((tip, i) => (
         <div key={i} className="flex flex-col items-center text-center gap-3 p-4 rounded-xl bg-primary/5 border border-primary/10 transition-all duration-300 hover:bg-primary/15 hover:shadow-lg hover:scale-[1.03] cursor-default">
           <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">{tip.icon}</div>
-          <h4 className="font-body text-body font-semibold text-foreground">{tip.label}</h4>
-          <p className="font-body text-body text-muted-foreground leading-relaxed font-light">{tip.desc}</p>
+          <h4 className="font-body text-sm font-semibold text-foreground">{tip.label}</h4>
+          <p className="font-body text-xs text-muted-foreground leading-relaxed">{tip.desc}</p>
         </div>
       ))}
     </div>

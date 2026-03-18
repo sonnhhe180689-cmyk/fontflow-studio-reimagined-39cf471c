@@ -17,10 +17,10 @@ const NewsletterSection = () => {
   return (
     <div className="border-b border-primary-foreground/20 py-12">
       <div className="container mx-auto px-4 text-center">
-        <h3 className="font-display text-subtitle font-bold text-primary-foreground mb-3">
+        <h3 className="font-display text-2xl md:text-3xl font-bold text-primary-foreground mb-3">
           CẬP NHẬT MỚI NHẤT
         </h3>
-        <p className="font-body text-body text-primary-foreground/60 mb-8 font-light">
+        <p className="font-body text-sm text-primary-foreground/60 mb-8">
           Đăng ký để nhận thông tin về bộ sưu tập mới và ưu đãi đặc biệt
         </p>
         <form onSubmit={handleSubscribe} className="flex max-w-lg mx-auto">
@@ -29,11 +29,11 @@ const NewsletterSection = () => {
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="flex-1 px-5 py-3 bg-transparent border border-primary-foreground/30 text-primary-foreground font-body text-body placeholder:text-primary-foreground/40 focus:outline-none focus:border-primary transition-colors font-light"
+            className="flex-1 px-5 py-3 bg-transparent border border-primary-foreground/30 text-primary-foreground font-body text-sm placeholder:text-primary-foreground/40 focus:outline-none focus:border-primary transition-colors"
           />
           <button
             type="submit"
-            className="px-8 py-3 bg-primary-foreground text-foreground font-body font-semibold text-body tracking-wider hover:bg-primary-foreground/90 transition-colors"
+            className="px-8 py-3 bg-primary-foreground text-foreground font-body font-medium text-sm tracking-wider hover:bg-primary-foreground/90 transition-colors"
           >
             ĐĂNG KÝ
           </button>

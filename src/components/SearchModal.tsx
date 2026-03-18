@@ -40,30 +40,30 @@ const SearchModal = ({ open, onClose }: SearchModalProps) => {
             placeholder="Tìm kiếm vòng cổ..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="flex-1 font-body text-subtitle bg-transparent outline-none font-semibold"
+            className="flex-1 font-body text-lg bg-transparent outline-none"
           />
           <button onClick={onClose}><X className="w-5 h-5 text-muted-foreground hover:text-foreground" /></button>
         </div>
 
         <div className="space-y-3">
           {filtered.length === 0 ? (
-            <p className="font-body text-body text-muted-foreground text-center py-8 font-light">Không tìm thấy sản phẩm nào</p>
+            <p className="font-body text-sm text-muted-foreground text-center py-8">Không tìm thấy sản phẩm nào</p>
           ) : (
             filtered.map((p) => (
               <div key={p.id} className="flex items-center gap-4 p-3 rounded-lg hover:bg-muted transition-colors">
                 <img src={p.image} alt={p.name} className="w-16 h-16 object-cover rounded-md" />
                 <div className="flex-1">
-                  <h4 className="font-display text-subtitle font-semibold">{p.nameVi}</h4>
-                  <p className="font-body text-body text-primary font-light">{p.priceDisplay}</p>
+                  <h4 className="font-display text-base font-semibold">{p.nameVi}</h4>
+                  <p className="font-body text-sm text-primary">{p.priceDisplay}</p>
                 </div>
-                <button onClick={() => handleAdd(p)} className="btn-outline-gold text-body px-4 py-2 font-light">Thêm vào giỏ</button>
+                <button onClick={() => handleAdd(p)} className="btn-outline-gold text-xs px-4 py-2">Thêm vào giỏ</button>
               </div>
             ))
           )}
         </div>
 
         <div className="text-center mt-4">
-          <Link to="/bo-suu-tap" onClick={onClose} className="font-body text-body text-primary hover:underline font-light">Xem tất cả bộ sưu tập →</Link>
+          <Link to="/bo-suu-tap" onClick={onClose} className="font-body text-sm text-primary hover:underline">Xem tất cả bộ sưu tập →</Link>
         </div>
       </div>
     </div>
