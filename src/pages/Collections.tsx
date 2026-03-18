@@ -116,7 +116,7 @@ const Collections = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-10">
             <h2 className="section-title">Bộ Sưu Tập Vòng Cổ</h2>
-            <p className="section-subtitle">Khám phá vẻ đẹp tinh tế từ những thiết kế độc đáo</p>
+            <p className="section-subtitle my-[10px]">Khám phá vẻ đẹp tinh tế từ những thiết kế độc đáo</p>
             <p className="font-body text-sm text-muted-foreground mt-4 max-w-xl mx-auto my-0">
               ​
             </p>
