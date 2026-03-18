@@ -19,19 +19,19 @@ const TryOnPhotoArea = ({ userImage, showCamera, videoRef, fileInputRef, necklac
         {!userImage && !showCamera ? (
           <div className="aspect-[4/5] flex flex-col items-center justify-center gap-4 bg-cream">
             <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center mb-2"><Camera className="w-10 h-10 text-primary" /></div>
-            <p className="font-display text-lg text-foreground">Chụp ảnh để thử vòng cổ</p>
-            <p className="font-body text-sm text-muted-foreground">Chụp selfie hoặc tải ảnh chân dung</p>
+            <p className="font-display text-subtitle text-foreground font-semibold">Chụp ảnh để thử vòng cổ</p>
+            <p className="font-body text-body text-muted-foreground font-light">Chụp selfie hoặc tải ảnh chân dung</p>
             <div className="flex gap-3 mt-2">
-              <button onClick={onOpenCamera} className="btn-gold flex items-center gap-2 text-sm px-6 py-2.5 rounded-full"><Camera className="w-4 h-4" /> Chụp Ảnh</button>
-              <button onClick={() => fileInputRef.current?.click()} className="btn-outline-gold flex items-center gap-2 text-sm px-6 py-2.5 rounded-full"><Upload className="w-4 h-4" /> Tải Ảnh</button>
+              <button onClick={onOpenCamera} className="btn-gold flex items-center gap-2 text-body px-6 py-2.5 rounded-full font-light"><Camera className="w-4 h-4" /> Chụp Ảnh</button>
+              <button onClick={() => fileInputRef.current?.click()} className="btn-outline-gold flex items-center gap-2 text-body px-6 py-2.5 rounded-full font-light"><Upload className="w-4 h-4" /> Tải Ảnh</button>
             </div>
           </div>
         ) : showCamera ? (
           <div className="relative">
             <video ref={videoRef} className="w-full aspect-[4/5] object-cover" autoPlay playsInline muted style={{ transform: "scaleX(-1)" }} />
             <div className="absolute bottom-4 left-0 right-0 flex gap-3 justify-center">
-              <button onClick={onCapture} className="btn-gold rounded-full px-6 py-2.5 text-sm">Chụp Ảnh</button>
-              <button onClick={onStopCamera} className="btn-outline-gold rounded-full px-6 py-2.5 text-sm bg-card/80">Hủy</button>
+              <button onClick={onCapture} className="btn-gold rounded-full px-6 py-2.5 text-body font-light">Chụp Ảnh</button>
+              <button onClick={onStopCamera} className="btn-outline-gold rounded-full px-6 py-2.5 text-body bg-card/80 font-light">Hủy</button>
             </div>
           </div>
         ) : (
@@ -43,7 +43,7 @@ const TryOnPhotoArea = ({ userImage, showCamera, videoRef, fileInputRef, necklac
                 onMouseDown={onMouseDown} draggable={false} />
               <div className="absolute top-4 right-4 bg-card/90 backdrop-blur-sm rounded-xl px-3 py-2 shadow-md flex items-center gap-2 cursor-pointer hover:bg-card transition-colors">
                 <img src={necklaces[selectedNecklace].image} alt="" className="w-8 h-8 rounded-lg object-cover" />
-                <span className="font-body text-xs font-medium text-foreground">Xoay 3D</span>
+                <span className="font-body text-body font-semibold text-foreground">Xoay 3D</span>
               </div>
             </div>
           </div>
@@ -56,11 +56,11 @@ const TryOnPhotoArea = ({ userImage, showCamera, videoRef, fileInputRef, necklac
           { key: "adjust" as const, icon: <SlidersHorizontal className="w-4 h-4" />, label: "Điều Chỉnh" },
         ]).map((tab) => (
           <button key={tab.key} onClick={() => onSelectTab(tab.key)}
-            className={`flex items-center gap-2 px-5 py-2.5 rounded-full font-body text-sm font-medium transition-all ${activeTab === tab.key ? "gradient-tiffany text-primary-foreground shadow-md" : "bg-card text-foreground border border-border hover:border-primary/30"}`}>
+            className={`flex items-center gap-2 px-5 py-2.5 rounded-full font-body text-body font-semibold transition-all ${activeTab === tab.key ? "gradient-tiffany text-primary-foreground shadow-md" : "bg-card text-foreground border border-border hover:border-primary/30"}`}>
             {tab.icon} {tab.label}
           </button>
         ))}
-        <button onClick={onReset} className="flex items-center gap-2 px-5 py-2.5 rounded-full font-body text-sm font-medium bg-card text-foreground border border-border hover:border-destructive/30 hover:text-destructive transition-all">
+        <button onClick={onReset} className="flex items-center gap-2 px-5 py-2.5 rounded-full font-body text-body font-semibold bg-card text-foreground border border-border hover:border-destructive/30 hover:text-destructive transition-all">
           <RotateCcw className="w-4 h-4" /> Đặt Lại
         </button>
       </div>

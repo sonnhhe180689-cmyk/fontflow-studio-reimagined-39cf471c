@@ -30,10 +30,10 @@ const Contact = () => {
       <section className="py-16 luxury-header-classic">
         <div className="container mx-auto px-4 text-center relative z-10">
           <h1 style={{ textShadow: '0 2px 8px rgba(0,0,0,0.3)' }}>
-            <span className="block font-display text-4xl md:text-5xl font-bold text-primary-foreground">Liên Hệ</span>
-            <span className="block font-display text-5xl md:text-6xl font-bold text-primary mt-1" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.25)' }}>Với Chúng Tôi</span>
+            <span className="block font-display text-title font-bold text-primary-foreground">Liên Hệ</span>
+            <span className="block font-display text-title font-bold text-primary mt-1" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.25)' }}>Với Chúng Tôi</span>
           </h1>
-          <p className="font-body text-primary-foreground/80 mt-4 text-base md:text-lg max-w-xl mx-auto" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.2)' }}>
+          <p className="font-body text-primary-foreground/80 mt-4 text-body max-w-xl mx-auto font-light" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.2)' }}>
             Có câu hỏi hoặc cần hỗ trợ? Đội ngũ của chúng tôi luôn sẵn sàng giúp đỡ bạn
           </p>
         </div>
@@ -73,9 +73,9 @@ const Contact = () => {
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4 transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-110 group-hover:shadow-[0_0_15px_hsl(var(--primary)/0.3)]">
                       {info.icon}
                     </div>
-                    <h3 className="font-display text-lg font-bold mb-2 transition-colors duration-300 group-hover:text-primary text-foreground drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">{info.title}</h3>
+                    <h3 className="font-display text-subtitle font-bold mb-2 transition-colors duration-300 group-hover:text-primary text-foreground drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">{info.title}</h3>
                     {info.lines.map((line, j) =>
-                  <p key={j} className="text-sm text-foreground/80 font-medium transition-colors duration-300 group-hover:text-foreground drop-shadow-[0_1px_1px_rgba(255,255,255,0.6)] font-mono">{line}</p>
+                  <p key={j} className="text-body text-foreground/80 font-semibold transition-colors duration-300 group-hover:text-foreground drop-shadow-[0_1px_1px_rgba(255,255,255,0.6)] font-mono">{line}</p>
                   )}
                   </div>
                 </div>
@@ -83,11 +83,11 @@ const Contact = () => {
             </div>
 
             <div className="bg-card rounded-xl p-8 shadow-sm transition-all duration-300 hover:shadow-lg border border-transparent hover:border-primary/20">
-              <h3 className="font-display text-2xl font-bold mb-6">Gửi Tin Nhắn</h3>
+              <h3 className="font-display text-subtitle font-bold mb-6">Gửi Tin Nhắn</h3>
               <div className="space-y-4">
-                <input type="text" placeholder="Họ và tên *" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} className="w-full px-4 py-3 border border-border rounded-sm bg-background font-body text-sm focus:outline-none focus:border-primary transition-all duration-300 hover:border-primary/50" />
-                <input type="email" placeholder="Email *" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className="w-full px-4 py-3 border border-border rounded-sm bg-background font-body text-sm focus:outline-none focus:border-primary transition-all duration-300 hover:border-primary/50" />
-                <textarea placeholder="Nội dung tin nhắn *" rows={5} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} className="w-full px-4 py-3 border border-border rounded-sm bg-background font-body text-sm focus:outline-none focus:border-primary resize-none transition-all duration-300 hover:border-primary/50" />
+                <input type="text" placeholder="Họ và tên *" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} className="w-full px-4 py-3 border border-border rounded-sm bg-background font-body text-body focus:outline-none focus:border-primary transition-all duration-300 hover:border-primary/50 font-light" />
+                <input type="email" placeholder="Email *" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className="w-full px-4 py-3 border border-border rounded-sm bg-background font-body text-body focus:outline-none focus:border-primary transition-all duration-300 hover:border-primary/50 font-light" />
+                <textarea placeholder="Nội dung tin nhắn *" rows={5} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} className="w-full px-4 py-3 border border-border rounded-sm bg-background font-body text-body focus:outline-none focus:border-primary resize-none transition-all duration-300 hover:border-primary/50 font-light" />
                 <button onClick={handleSubmit} className="btn-gold w-full flex items-center justify-center gap-2">
                   Gửi Tin Nhắn <Send className="w-4 h-4" />
                 </button>
@@ -98,7 +98,7 @@ const Contact = () => {
       </section>
 
       <section className="relative">
-        <a href="https://maps.google.com/?q=21.0124,105.5257" target="_blank" rel="noopener noreferrer" className="absolute top-4 left-4 z-10 bg-background px-4 py-2 rounded-md shadow-md font-body text-sm hover:bg-primary hover:text-primary-foreground transition-colors flex items-center gap-1">
+        <a href="https://maps.google.com/?q=21.0124,105.5257" target="_blank" rel="noopener noreferrer" className="absolute top-4 left-4 z-10 bg-background px-4 py-2 rounded-md shadow-md font-body text-body hover:bg-primary hover:text-primary-foreground transition-colors flex items-center gap-1 font-light">
           Mở trong Maps ↗
         </a>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.7!2d105.5225!3d21.0124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abc60e7d3f19%3A0x2be9d7d0b5abcbf4!2sFPT%20University!5e0!3m2!1svi!2svn!4v1700000000000!5m2!1svi!2svn" width="100%" height="400" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Luna Jewel Location" />

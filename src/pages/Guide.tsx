@@ -55,10 +55,10 @@ const Guide = () => {
       <section className="py-16 luxury-header-classic">
         <div className="container mx-auto px-4 text-center relative z-10">
           <h1 style={{ textShadow: '0 2px 8px rgba(0,0,0,0.3)' }}>
-            <span className="block font-display text-4xl md:text-5xl font-bold text-primary-foreground">Hướng Dẫn</span>
-            <span className="block font-display text-5xl md:text-6xl font-bold text-primary mt-1" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.25)' }}>Sử Dụng</span>
+            <span className="block font-display text-title font-bold text-primary-foreground">Hướng Dẫn</span>
+            <span className="block font-display text-title font-bold text-primary mt-1" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.25)' }}>Sử Dụng</span>
           </h1>
-          <p className="font-body text-primary-foreground/80 mt-4 text-base md:text-lg max-w-2xl mx-auto" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.2)' }}>
+          <p className="font-body text-primary-foreground/80 mt-4 text-body max-w-2xl mx-auto font-light" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.2)' }}>
             Hướng dẫn chi tiết cách sử dụng tính năng thử vòng cổ trực tuyến và đặt hàng tại Luna Jewel
           </p>
         </div>
@@ -100,14 +100,14 @@ const Guide = () => {
                     {step.icon}
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-display text-xl font-bold mb-2 transition-colors duration-300 group-hover:text-primary text-foreground drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">{step.title}</h3>
-                    <p className="font-body text-sm text-foreground/80 font-medium leading-relaxed mb-4 drop-shadow-[0_1px_1px_rgba(255,255,255,0.6)]">{step.desc}</p>
+                    <h3 className="font-display text-subtitle font-bold mb-2 transition-colors duration-300 group-hover:text-primary text-foreground drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">{step.title}</h3>
+                    <p className="font-body text-body text-foreground/80 font-semibold leading-relaxed mb-4 drop-shadow-[0_1px_1px_rgba(255,255,255,0.6)]">{step.desc}</p>
                     <div className="bg-background/70 backdrop-blur-sm rounded-lg p-4 transition-all duration-300 group-hover:bg-background/80">
-                      <p className="font-body text-sm font-semibold mb-2 text-foreground">Mẹo nhỏ:</p>
+                      <p className="font-body text-body font-bold mb-2 text-foreground">Mẹo nhỏ:</p>
                       {step.tips.map((tip, j) => (
                         <div key={j} className="flex items-center gap-2 mb-1">
                           <CheckCircle className="w-4 h-4 text-primary transition-transform duration-300 group-hover:scale-110" />
-                          <span className="font-body text-sm text-foreground/80 font-medium">{tip}</span>
+                          <span className="font-body text-body text-foreground/80 font-semibold">{tip}</span>
                         </div>
                       ))}
                     </div>
@@ -147,15 +147,15 @@ const Guide = () => {
         }} />
         <div className="container mx-auto px-4 max-w-3xl relative z-10">
           <div className="text-center mb-12">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)]">
+            <h2 className="font-display text-title font-bold text-foreground drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)]">
               Câu Hỏi <span className="text-primary">Thường Gặp</span>
             </h2>
           </div>
           <div className="space-y-4">
             {faqs.map((faq, i) => (
               <div key={i} className="bg-card/80 backdrop-blur-sm rounded-lg p-6 shadow-sm transition-all duration-300 hover:shadow-[0_8px_30px_hsl(var(--primary)/0.15)] hover:scale-[1.01] hover:border-primary/30 border border-primary/10 cursor-pointer group">
-                <h3 className="font-display text-lg font-semibold mb-2 transition-colors duration-300 group-hover:text-primary">{faq.q}</h3>
-                <p className="font-body text-sm text-muted-foreground leading-relaxed">{faq.a}</p>
+                <h3 className="font-display text-subtitle font-semibold mb-2 transition-colors duration-300 group-hover:text-primary">{faq.q}</h3>
+                <p className="font-body text-body text-muted-foreground leading-relaxed font-light">{faq.a}</p>
               </div>
             ))}
           </div>

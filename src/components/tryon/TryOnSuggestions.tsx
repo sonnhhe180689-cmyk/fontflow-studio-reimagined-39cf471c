@@ -27,11 +27,11 @@ const TryOnSuggestions = ({ necklaces, selectedNecklace, favorites, onSelect, on
       <div className="flex gap-2 mb-5 flex-nowrap overflow-x-auto relative z-10">
         {filters.map((f) =>
         <button key={f.key} onClick={() => setActiveFilter(f.key)}
-        className={`px-4 py-2 rounded-full font-body text-sm font-medium transition-all ${activeFilter === f.key ? "gradient-tiffany text-primary-foreground shadow-sm" : "bg-secondary text-foreground hover:bg-accent"}`}>{f.label}</button>
+        className={`px-4 py-2 rounded-full font-body text-body font-semibold transition-all ${activeFilter === f.key ? "gradient-tiffany text-primary-foreground shadow-sm" : "bg-secondary text-foreground hover:bg-accent"}`}>{f.label}</button>
         )}
       </div>
       <div className="flex items-center justify-center gap-2 mb-6 relative z-10">
-        <Sparkles className="w-4 h-4 text-primary" /><h3 className="font-display text-xl font-bold text-foreground">Gợi Ý Cho Bạn</h3><Sparkles className="w-4 h-4 text-primary" />
+        <Sparkles className="w-4 h-4 text-primary" /><h3 className="font-display text-subtitle font-bold text-foreground">Gợi Ý Cho Bạn</h3><Sparkles className="w-4 h-4 text-primary" />
       </div>
       <div className="relative flex-1 z-10">
         {scrollOffset > 0 && <button onClick={() => setScrollOffset(Math.max(0, scrollOffset - 1))} className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-3 z-10 w-10 h-10 bg-card rounded-full shadow-lg flex items-center justify-center hover:bg-accent transition-colors"><ChevronLeft className="w-5 h-5 text-foreground" /></button>}
@@ -40,12 +40,12 @@ const TryOnSuggestions = ({ necklaces, selectedNecklace, favorites, onSelect, on
             const realIdx = necklaces.indexOf(n);
             return (
               <div key={n.id} onClick={() => onSelect(realIdx)} className={`cursor-pointer group relative rounded-xl overflow-hidden transition-all hover:shadow-lg ${selectedNecklace === realIdx ? "ring-2 ring-primary shadow-md" : ""}`}>
-                {realIdx === 0 && <span className="absolute top-2 left-2 z-10 bg-red-500 text-primary-foreground font-body text-[10px] font-bold px-2 py-0.5 rounded-full">Hot</span>}
+                {realIdx === 0 && <span className="absolute top-2 left-2 z-10 bg-red-500 text-primary-foreground font-body text-body font-bold px-2 py-0.5 rounded-full">Hot</span>}
                 <button onClick={(e) => {e.stopPropagation();onToggleFavorite(n.id);}} className="absolute top-2 right-2 z-10">
                   <Heart className={`w-5 h-5 transition-colors ${favorites.has(n.id) ? "text-red-500 fill-red-500" : "text-muted-foreground/50 group-hover:text-red-400"}`} />
                 </button>
                 <div className="bg-cream aspect-[3/4]"><img src={n.image} alt={n.nameVi} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" /></div>
-                <div className="p-2.5 bg-card font-mono text-xs"><p className="font-body text-xs font-medium text-foreground truncate">{n.name}</p><p className="font-body text-xs font-bold text-primary mt-0.5">{n.priceDisplay}</p></div>
+                <div className="p-2.5 bg-card font-mono text-body"><p className="font-body text-body font-semibold text-foreground truncate">{n.name}</p><p className="font-body text-body font-bold text-primary mt-0.5">{n.priceDisplay}</p></div>
               </div>);
 
           })}

@@ -32,7 +32,7 @@ const Navbar = () => {
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto flex items-center justify-between h-16 px-4">
-          <Link to="/" className="font-display text-2xl font-bold tracking-wider text-foreground">
+          <Link to="/" className="font-display text-subtitle font-bold tracking-wider text-foreground">
             Luna Jewel
           </Link>
 
@@ -41,7 +41,7 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`font-body text-sm tracking-wider transition-all duration-300 hover:text-primary hover:drop-shadow-[0_0_8px_hsl(var(--primary)/0.6)] ${
+                className={`font-body text-body tracking-wider transition-all duration-300 hover:text-primary hover:drop-shadow-[0_0_8px_hsl(var(--primary)/0.6)] font-light ${
                   location.pathname === link.path
                     ? "text-primary border-b-2 border-primary pb-1 drop-shadow-[0_0_8px_hsl(var(--primary)/0.6)]"
                     : "text-foreground"
@@ -80,7 +80,7 @@ const Navbar = () => {
                 key={link.path}
                 to={link.path}
                 onClick={() => setMobileOpen(false)}
-                className={`block px-6 py-3 font-body text-sm tracking-wider transition-all duration-300 hover:text-primary hover:bg-primary/5 hover:pl-8 ${
+                className={`block px-6 py-3 font-body text-body tracking-wider transition-all duration-300 hover:text-primary hover:bg-primary/5 hover:pl-8 font-light ${
                   location.pathname === link.path ? "text-primary" : "text-foreground"
                 }`}
               >
@@ -97,7 +97,7 @@ const Navbar = () => {
         <div className="fixed inset-0 z-[60] flex items-center justify-center bg-foreground/50 backdrop-blur-sm" onClick={() => setShowAuthModal(false)}>
           <div className="bg-background rounded-xl p-8 w-full max-w-md mx-4 shadow-xl" onClick={(e) => e.stopPropagation()}>
             <div className="flex justify-between items-center mb-6">
-              <h2 className="font-display text-2xl font-bold">
+              <h2 className="font-display text-subtitle font-bold">
                 {authMode === "login" ? "Đăng Nhập" : "Đăng Ký"}
               </h2>
               <button onClick={() => setShowAuthModal(false)}>
@@ -107,21 +107,21 @@ const Navbar = () => {
 
             <form onSubmit={handleAuth} className="space-y-4">
               {authMode === "register" && (
-                <input type="text" placeholder="Họ và tên" required value={authForm.name} onChange={(e) => setAuthForm({ ...authForm, name: e.target.value })} className="w-full px-4 py-3 border border-border rounded-sm bg-card font-body text-sm focus:outline-none focus:border-primary" />
+                <input type="text" placeholder="Họ và tên" required value={authForm.name} onChange={(e) => setAuthForm({ ...authForm, name: e.target.value })} className="w-full px-4 py-3 border border-border rounded-sm bg-card font-body text-body focus:outline-none focus:border-primary font-light" />
               )}
-              <input type="email" placeholder="Email" required value={authForm.email} onChange={(e) => setAuthForm({ ...authForm, email: e.target.value })} className="w-full px-4 py-3 border border-border rounded-sm bg-card font-body text-sm focus:outline-none focus:border-primary" />
-              <input type="password" placeholder="Mật khẩu" required value={authForm.password} onChange={(e) => setAuthForm({ ...authForm, password: e.target.value })} className="w-full px-4 py-3 border border-border rounded-sm bg-card font-body text-sm focus:outline-none focus:border-primary" />
+              <input type="email" placeholder="Email" required value={authForm.email} onChange={(e) => setAuthForm({ ...authForm, email: e.target.value })} className="w-full px-4 py-3 border border-border rounded-sm bg-card font-body text-body focus:outline-none focus:border-primary font-light" />
+              <input type="password" placeholder="Mật khẩu" required value={authForm.password} onChange={(e) => setAuthForm({ ...authForm, password: e.target.value })} className="w-full px-4 py-3 border border-border rounded-sm bg-card font-body text-body focus:outline-none focus:border-primary font-light" />
               <button type="submit" className="btn-gold w-full flex items-center justify-center gap-2">
                 <LogIn className="w-4 h-4" />
                 {authMode === "login" ? "Đăng Nhập" : "Đăng Ký"}
               </button>
             </form>
 
-            <p className="font-body text-sm text-center text-muted-foreground mt-4">
+            <p className="font-body text-body text-center text-muted-foreground mt-4 font-light">
               {authMode === "login" ? (
-                <>Chưa có tài khoản? <button className="text-primary font-medium" onClick={() => setAuthMode("register")}>Đăng ký</button></>
+                <>Chưa có tài khoản? <button className="text-primary font-semibold" onClick={() => setAuthMode("register")}>Đăng ký</button></>
               ) : (
-                <>Đã có tài khoản? <button className="text-primary font-medium" onClick={() => setAuthMode("login")}>Đăng nhập</button></>
+                <>Đã có tài khoản? <button className="text-primary font-semibold" onClick={() => setAuthMode("login")}>Đăng nhập</button></>
               )}
             </p>
           </div>
