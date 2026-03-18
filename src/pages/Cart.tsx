@@ -27,8 +27,8 @@ const Cart = () => {
     return (
       <div className="pt-16 min-h-screen bg-background">
         <div className="container mx-auto px-4 py-20 text-center">
-          <h1 className="font-display text-3xl font-bold mb-4">Giỏ Hàng Trống</h1>
-          <p className="font-body text-muted-foreground mb-8">Bạn chưa thêm sản phẩm nào vào giỏ hàng</p>
+          <h1 className="font-display text-title font-bold mb-4">Giỏ Hàng Trống</h1>
+          <p className="font-body text-muted-foreground mb-8 text-body font-light">Bạn chưa thêm sản phẩm nào vào giỏ hàng</p>
           <Link to="/bo-suu-tap"><button className="btn-gold">Khám Phá Bộ Sưu Tập</button></Link>
         </div>
       </div>
@@ -38,7 +38,7 @@ const Cart = () => {
   return (
     <div className="pt-16 min-h-screen bg-background">
       <div className="container mx-auto px-4 py-12">
-        <h1 className="font-display text-3xl md:text-4xl font-bold mb-8">
+        <h1 className="font-display text-title font-bold mb-8">
           {showCheckout ? "Xác Nhận Đơn Hàng" : "Giỏ Hàng"}
         </h1>
 
@@ -50,13 +50,13 @@ const Cart = () => {
                   <div key={item.id} className="bg-card rounded-lg p-4 flex items-center gap-4 shadow-sm">
                     <img src={item.image} alt={item.name} className="w-24 h-24 object-cover rounded-md" />
                     <div className="flex-1">
-                      <h3 className="font-display text-lg font-semibold">{item.nameVi}</h3>
-                      <p className="font-body text-sm text-primary">{formatPrice(item.price)}</p>
+                      <h3 className="font-display text-subtitle font-semibold">{item.nameVi}</h3>
+                      <p className="font-body text-body text-primary font-light">{formatPrice(item.price)}</p>
                       <div className="flex items-center gap-3 mt-2">
                         <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="w-8 h-8 rounded-full border border-border flex items-center justify-center hover:bg-muted">
                           <Minus className="w-4 h-4" />
                         </button>
-                        <span className="font-body text-lg font-medium w-8 text-center">{item.quantity}</span>
+                        <span className="font-body text-subtitle font-semibold w-8 text-center">{item.quantity}</span>
                         <button onClick={() => updateQuantity(item.id, item.quantity + 1)} className="w-8 h-8 rounded-full border border-border flex items-center justify-center hover:bg-muted">
                           <Plus className="w-4 h-4" />
                         </button>
@@ -66,30 +66,30 @@ const Cart = () => {
                       </div>
                     </div>
                     <div className="text-right">
-                      <p className="font-body font-semibold">{formatPrice(item.price * item.quantity)}</p>
+                      <p className="font-body font-semibold text-body">{formatPrice(item.price * item.quantity)}</p>
                     </div>
                   </div>
                 ))}
               </div>
             ) : (
               <form onSubmit={handleOrder} className="space-y-4">
-                <input type="text" placeholder="Họ và tên *" value={orderForm.name} onChange={(e) => setOrderForm({ ...orderForm, name: e.target.value })} className="w-full px-4 py-3 border border-border rounded-sm bg-card font-body text-sm focus:outline-none focus:border-primary" />
-                <input type="email" placeholder="Email *" value={orderForm.email} onChange={(e) => setOrderForm({ ...orderForm, email: e.target.value })} className="w-full px-4 py-3 border border-border rounded-sm bg-card font-body text-sm focus:outline-none focus:border-primary" />
-                <input type="tel" placeholder="Số điện thoại *" value={orderForm.phone} onChange={(e) => setOrderForm({ ...orderForm, phone: e.target.value })} className="w-full px-4 py-3 border border-border rounded-sm bg-card font-body text-sm focus:outline-none focus:border-primary" />
-                <textarea placeholder="Địa chỉ giao hàng *" rows={3} value={orderForm.address} onChange={(e) => setOrderForm({ ...orderForm, address: e.target.value })} className="w-full px-4 py-3 border border-border rounded-sm bg-card font-body text-sm focus:outline-none focus:border-primary" />
-                <textarea placeholder="Ghi chú (tùy chọn)" rows={3} value={orderForm.note} onChange={(e) => setOrderForm({ ...orderForm, note: e.target.value })} className="w-full px-4 py-3 border border-border rounded-sm bg-card font-body text-sm focus:outline-none focus:border-primary" />
+                <input type="text" placeholder="Họ và tên *" value={orderForm.name} onChange={(e) => setOrderForm({ ...orderForm, name: e.target.value })} className="w-full px-4 py-3 border border-border rounded-sm bg-card font-body text-body focus:outline-none focus:border-primary font-light" />
+                <input type="email" placeholder="Email *" value={orderForm.email} onChange={(e) => setOrderForm({ ...orderForm, email: e.target.value })} className="w-full px-4 py-3 border border-border rounded-sm bg-card font-body text-body focus:outline-none focus:border-primary font-light" />
+                <input type="tel" placeholder="Số điện thoại *" value={orderForm.phone} onChange={(e) => setOrderForm({ ...orderForm, phone: e.target.value })} className="w-full px-4 py-3 border border-border rounded-sm bg-card font-body text-body focus:outline-none focus:border-primary font-light" />
+                <textarea placeholder="Địa chỉ giao hàng *" rows={3} value={orderForm.address} onChange={(e) => setOrderForm({ ...orderForm, address: e.target.value })} className="w-full px-4 py-3 border border-border rounded-sm bg-card font-body text-body focus:outline-none focus:border-primary font-light" />
+                <textarea placeholder="Ghi chú (tùy chọn)" rows={3} value={orderForm.note} onChange={(e) => setOrderForm({ ...orderForm, note: e.target.value })} className="w-full px-4 py-3 border border-border rounded-sm bg-card font-body text-body focus:outline-none focus:border-primary font-light" />
                 <button type="submit" className="btn-gold w-full">Xác Nhận Đặt Hàng</button>
-                <button type="button" onClick={() => setShowCheckout(false)} className="w-full font-body text-sm text-muted-foreground hover:text-foreground text-center py-2">Quay lại</button>
+                <button type="button" onClick={() => setShowCheckout(false)} className="w-full font-body text-body text-muted-foreground hover:text-foreground text-center py-2 font-light">Quay lại</button>
               </form>
             )}
           </div>
 
           <div className="bg-card rounded-lg p-6 shadow-sm h-fit">
-            <h2 className="font-display text-xl font-bold mb-4">Tổng Đơn Hàng</h2>
-            <div className="space-y-2 font-body text-sm">
+            <h2 className="font-display text-subtitle font-bold mb-4">Tổng Đơn Hàng</h2>
+            <div className="space-y-2 font-body text-body font-light">
               <div className="flex justify-between"><span className="text-muted-foreground">Tạm tính</span><span>{formatPrice(totalPrice)}</span></div>
               <div className="flex justify-between"><span className="text-muted-foreground">Phí vận chuyển</span><span>Miễn phí</span></div>
-              <div className="border-t border-border pt-2 mt-2 flex justify-between font-semibold text-lg">
+              <div className="border-t border-border pt-2 mt-2 flex justify-between font-semibold text-subtitle">
                 <span>Tổng cộng</span><span className="text-primary">{formatPrice(totalPrice)}</span>
               </div>
             </div>

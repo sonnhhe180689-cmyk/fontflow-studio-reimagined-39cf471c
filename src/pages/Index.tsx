@@ -55,10 +55,10 @@ const Index = () => {
             map((feature, i) =>
             <div key={i} className="text-center">
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">{feature.icon}</span>
+                  <span className="text-subtitle">{feature.icon}</span>
                 </div>
-                <h3 className="font-display text-lg font-semibold mb-2">{feature.title}</h3>
-                <p className="font-body text-xs text-muted-foreground leading-relaxed">{feature.desc}</p>
+                <h3 className="font-display text-subtitle font-semibold mb-2">{feature.title}</h3>
+                <p className="font-body text-body text-muted-foreground leading-relaxed font-light">{feature.desc}</p>
               </div>
             )}
           </div>
@@ -70,8 +70,8 @@ const Index = () => {
         <img src={craftsmanship} alt="Nghệ thuật chế tác" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-foreground/60 flex items-center justify-center">
           <div className="text-center">
-            <h2 className="font-heading text-4xl text-primary-foreground md:text-6xl">Nghệ Thuật Chế Tác Vòng Cổ</h2>
-            <p className="font-body tracking-[0.3em] uppercase text-primary-foreground/80 mt-3 text-base">Tạo tác tinh xảo từng chi tiết</p>
+            <h2 className="font-heading text-title text-primary-foreground font-bold">Nghệ Thuật Chế Tác Vòng Cổ</h2>
+            <p className="font-body tracking-[0.3em] uppercase text-primary-foreground/80 mt-3 text-body font-light">Tạo tác tinh xảo từng chi tiết</p>
             <button
               onClick={() => setShowVideo(true)}
               className="mt-8 w-16 h-16 rounded-full border-2 border-primary-foreground/60 flex items-center justify-center mx-auto hover:border-primary-foreground hover:bg-primary-foreground/20 transition-all">
@@ -108,13 +108,13 @@ const Index = () => {
               <img src={craftsmanship} alt="Chế tác" className="w-full h-80 object-cover" />
             </div>
             <div>
-              <h2 className="font-display text-3xl md:text-4xl font-bold">Khám Phá Câu Chuyện</h2>
+              <h2 className="font-display text-title font-bold">Khám Phá Câu Chuyện</h2>
               <p className="section-subtitle text-left">Nghệ Thuật Chế Tác</p>
-              <p className="font-body text-muted-foreground mt-6 leading-relaxed">
+              <p className="font-body text-muted-foreground mt-6 leading-relaxed text-body font-light">
                 Mỗi chiếc vòng cổ được chế tác bởi những nghệ nhân kim hoàn giàu kinh nghiệm với sự tỉ mỉ tuyệt đối trong từng chi tiết. Từ việc tuyển chọn đá quý đến sản phẩm cuối cùng, mỗi sản phẩm đều mang giá trị nghệ thuật và đẳng cấp vượt mọi giới hạn.
               </p>
               <Link to="/bo-suu-tap">
-                <button className="btn-outline-gold mt-8 text-sm">Khám Phá Bộ Sưu Tập</button>
+                <button className="btn-outline-gold mt-8 text-body font-light">Khám Phá Bộ Sưu Tập</button>
               </Link>
             </div>
           </div>
@@ -132,10 +132,10 @@ const Index = () => {
                   <img src={service.image} alt={service.title} className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
                 </div>
                 <div className="p-6 text-center">
-                  <h3 className="font-display text-xl font-semibold mb-3">{service.title}</h3>
-                  <p className="font-body text-sm text-muted-foreground leading-relaxed mb-4">{service.desc}</p>
+                  <h3 className="font-display text-subtitle font-semibold mb-3">{service.title}</h3>
+                  <p className="font-body text-body text-muted-foreground leading-relaxed mb-4 font-light">{service.desc}</p>
                   <Link to={service.link}>
-                    <button className="btn-outline-gold text-xs px-6 py-2">{service.cta}</button>
+                    <button className="btn-outline-gold text-body px-6 py-2 font-light">{service.cta}</button>
                   </Link>
                 </div>
               </div>
@@ -147,12 +147,12 @@ const Index = () => {
       {/* Try-On CTA */}
       <section className="py-20 bg-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground">Trải Nghiệm Thử Vòng Cổ</h2>
-          <p className="font-body text-primary-foreground/70 mt-4 max-w-xl mx-auto">
+          <h2 className="font-display text-title font-bold text-primary-foreground">Trải Nghiệm Thử Vòng Cổ</h2>
+          <p className="font-body text-primary-foreground/70 mt-4 max-w-xl mx-auto text-body font-light">
             Tải ảnh của bạn lên và thử ngay các mẫu vòng cổ yêu thích. Xem trước khi mua để chắc chắn bạn đã chọn đúng!
           </p>
           <Link to="/thu-vong-co">
-            <button className="btn-gold mt-8 flex items-center gap-2 mx-auto text-sm">
+            <button className="btn-gold mt-8 flex items-center gap-2 mx-auto text-body font-light">
               Thử Ngay Miễn Phí <ArrowRight className="w-4 h-4" />
             </button>
           </Link>
@@ -180,14 +180,14 @@ const FeaturedCarousel = ({ products, onAddToCart }: {products: typeof import("@
                   <img src={product.image} alt={product.name} className="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-110" />
                 </Link>
                 <div className="mt-4 text-center">
-                  <h3 className="font-display text-lg font-semibold">{product.name}</h3>
-                  <p className="mt-1 font-mono text-base my-0 bg-primary-foreground font-semibold text-primary">{product.priceDisplay}</p>
+                  <h3 className="font-display text-subtitle font-semibold">{product.name}</h3>
+                  <p className="mt-1 font-mono text-body my-0 bg-primary-foreground font-semibold text-primary">{product.priceDisplay}</p>
                   <div className="grid grid-cols-2 gap-2">
-                    <button onClick={() => onAddToCart(product)} className="btn-outline-gold text-xs px-4 py-2 w-full">
+                    <button onClick={() => onAddToCart(product)} className="btn-outline-gold text-body px-4 py-2 w-full font-light">
                       <ShoppingCart className="w-3 h-3 inline mr-1" /> Thêm Vào Giỏ
                     </button>
                     <Link to="/thu-vong-co?camera=1" className="w-full">
-                      <button className="btn-gold text-xs px-4 py-2 w-full">✨ Thử Ngay</button>
+                      <button className="btn-gold text-body px-4 py-2 w-full font-light">✨ Thử Ngay</button>
                     </Link>
                   </div>
                 </div>

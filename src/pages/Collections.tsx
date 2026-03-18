@@ -72,22 +72,22 @@ const Collections = () => {
         <div className="absolute inset-0 flex items-center">
           <div className="container mx-auto px-4 md:px-16 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
             <div className="max-w-lg">
-              <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight">
+              <h1 className="font-display text-title font-bold text-primary-foreground leading-tight">
                 Vẻ Đẹp<br /><span className="text-primary">Vượt Thời Gian</span>
               </h1>
-              <p className="font-body text-sm md:text-base text-primary-foreground/80 mt-4 leading-relaxed max-w-md">
+              <p className="font-body text-body text-primary-foreground/80 mt-4 leading-relaxed max-w-md font-light">
                 Khám phá bộ sưu tập vòng cổ cao cấp được chế tác tinh xảo. Thử trực tiếp trên ảnh của bạn với công nghệ AR 2D hiện đại.
               </p>
               <Link to="/thu-vong-co">
-                <button className="btn-gold mt-6 text-sm flex items-center gap-2">
+                <button className="btn-gold mt-6 text-body flex items-center gap-2 font-light">
                   Khám Phá Ngay <ArrowRight className="w-4 h-4" />
                 </button>
               </Link>
             </div>
             <div className="w-48 h-48 md:w-56 md:h-56 rounded-full border border-primary-foreground/30 bg-primary-foreground/10 backdrop-blur-md flex flex-col items-center justify-center text-center shadow-[0_0_40px_rgba(255,255,255,0.1),inset_0_0_30px_rgba(255,255,255,0.05)]">
-              <h3 className="font-display text-xl md:text-2xl font-bold leading-tight drop-shadow-lg"><span className="text-primary-foreground">Bộ Sưu Tập</span><br /><span className="text-primary">Vòng Cổ</span></h3>
-              <p className="font-body text-xs text-primary-foreground/70 mt-1 tracking-wider uppercase">Luna Jewel Collection</p>
-              <button onClick={() => document.getElementById('collections-grid')?.scrollIntoView({ behavior: 'smooth' })} className="mt-3 px-5 py-2 text-[10px] font-body font-medium tracking-wider text-primary-foreground rounded-full bg-gradient-to-r from-[hsl(170,45%,55%)] to-[hsl(185,50%,60%)] hover:from-[hsl(170,45%,50%)] hover:to-[hsl(185,50%,55%)] shadow-md hover:shadow-lg transition-all flex items-center gap-1">
+              <h3 className="font-display text-subtitle font-bold leading-tight drop-shadow-lg"><span className="text-primary-foreground">Bộ Sưu Tập</span><br /><span className="text-primary">Vòng Cổ</span></h3>
+              <p className="font-body text-body text-primary-foreground/70 mt-1 tracking-wider uppercase font-light">Luna Jewel Collection</p>
+              <button onClick={() => document.getElementById('collections-grid')?.scrollIntoView({ behavior: 'smooth' })} className="mt-3 px-5 py-2 text-body font-body font-semibold tracking-wider text-primary-foreground rounded-full bg-gradient-to-r from-[hsl(170,45%,55%)] to-[hsl(185,50%,60%)] hover:from-[hsl(170,45%,50%)] hover:to-[hsl(185,50%,55%)] shadow-md hover:shadow-lg transition-all flex items-center gap-1">
                 Xem Chi Tiết <ArrowRight className="w-3 h-3" />
               </button>
             </div>
@@ -96,16 +96,16 @@ const Collections = () => {
         <div className="absolute bottom-0 left-0 right-0 pb-2">
           <div className="container mx-auto px-4 md:px-16 flex gap-12">
             <div>
-              <p className="text-2xl font-bold text-primary md:text-3xl font-mono">24/7</p>
-              <p className="font-body text-xs text-primary-foreground/70">Hỗ Trợ Khách Hàng</p>
+              <p className="text-subtitle font-bold text-primary font-mono">24/7</p>
+              <p className="font-body text-body text-primary-foreground/70 font-light">Hỗ Trợ Khách Hàng</p>
             </div>
             <div>
-              <p className="text-2xl font-bold text-primary md:text-3xl font-mono">7 Ngày</p>
-              <p className="font-body text-xs text-primary-foreground/70">Miễn Phí Đổi Trả</p>
+              <p className="text-subtitle font-bold text-primary font-mono">7 Ngày</p>
+              <p className="font-body text-body text-primary-foreground/70 font-light">Miễn Phí Đổi Trả</p>
             </div>
             <div>
-              <p className="text-2xl font-bold text-primary md:text-3xl font-mono">5<Star className="w-4 h-4 inline text-primary ml-0.5 -mt-1" /></p>
-              <p className="font-body text-xs text-primary-foreground/70">Đánh Giá</p>
+              <p className="text-subtitle font-bold text-primary font-mono">5<Star className="w-4 h-4 inline text-primary ml-0.5 -mt-1" /></p>
+              <p className="font-body text-body text-primary-foreground/70 font-light">Đánh Giá</p>
             </div>
           </div>
         </div>
@@ -117,7 +117,7 @@ const Collections = () => {
           <div className="text-center mb-10">
             <h2 className="section-title">Bộ Sưu Tập Vòng Cổ</h2>
             <p className="section-subtitle my-[10px]">Khám phá vẻ đẹp tinh tế từ những thiết kế độc đáo</p>
-            <p className="font-body text-sm text-muted-foreground mt-4 max-w-xl mx-auto my-0">
+            <p className="font-body text-body text-muted-foreground mt-4 max-w-xl mx-auto my-0 font-light">
               ​
             </p>
           </div>
@@ -129,7 +129,7 @@ const Collections = () => {
                 placeholder="Tìm kiếm vòng cổ..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 border border-border rounded-full bg-card font-body text-sm focus:outline-none focus:border-primary" />
+                className="w-full pl-10 pr-4 py-2.5 border border-border rounded-full bg-card font-body text-body focus:outline-none focus:border-primary font-light" />
               
             </div>
             <div className="flex gap-2 flex-wrap justify-center">
@@ -137,7 +137,7 @@ const Collections = () => {
               <button
                 key={cat.value}
                 onClick={() => setSelectedCategory(cat.value)}
-                className={`px-4 py-2 rounded-full text-xs font-body font-medium border transition-all ${
+                className={`px-4 py-2 rounded-full text-body font-body font-semibold border transition-all ${
                 selectedCategory === cat.value ?
                 "bg-primary text-primary-foreground border-primary" :
                 "bg-card text-foreground border-border hover:border-primary/50"}`
@@ -159,8 +159,8 @@ const Collections = () => {
         <img src={bgShowroom} alt="Không gian trưng bày sang trọng" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-foreground/40 flex items-center justify-center">
           <div className="text-center">
-            <h2 className="font-display text-3xl md:text-4xl text-primary-foreground">Không Gian Sang Trọng</h2>
-            <p className="font-body text-sm tracking-[0.2em] uppercase text-primary-foreground/80 mt-3">Trải nghiệm mua sắm đẳng cấp tại cửa hàng</p>
+            <h2 className="font-display text-title text-primary-foreground font-bold">Không Gian Sang Trọng</h2>
+            <p className="font-body text-body tracking-[0.2em] uppercase text-primary-foreground/80 mt-3 font-light">Trải nghiệm mua sắm đẳng cấp tại cửa hàng</p>
           </div>
         </div>
       </section>
@@ -184,11 +184,11 @@ const Collections = () => {
             )}
           </div>
           <div className="space-y-4">
-            <input type="text" placeholder="Tên của bạn" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} className="w-full px-4 py-3 border border-border rounded-sm bg-card font-body text-sm focus:outline-none focus:border-primary" />
-            <input type="email" placeholder="Email của bạn" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} className="w-full px-4 py-3 border border-border rounded-sm bg-card font-body text-sm focus:outline-none focus:border-primary" />
-            <textarea placeholder="Đánh giá của bạn" rows={4} value={formData.review} onChange={(e) => setFormData({ ...formData, review: e.target.value })} className="w-full px-4 py-3 border border-border rounded-sm bg-card font-body text-sm focus:outline-none focus:border-primary resize-none" />
+            <input type="text" placeholder="Tên của bạn" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} className="w-full px-4 py-3 border border-border rounded-sm bg-card font-body text-body focus:outline-none focus:border-primary font-light" />
+            <input type="email" placeholder="Email của bạn" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} className="w-full px-4 py-3 border border-border rounded-sm bg-card font-body text-body focus:outline-none focus:border-primary font-light" />
+            <textarea placeholder="Đánh giá của bạn" rows={4} value={formData.review} onChange={(e) => setFormData({ ...formData, review: e.target.value })} className="w-full px-4 py-3 border border-border rounded-sm bg-card font-body text-body focus:outline-none focus:border-primary resize-none font-light" />
             <div className="text-center">
-              <button onClick={handleSubmitReview} className="btn-gold text-sm">Gửi Đánh Giá</button>
+              <button onClick={handleSubmitReview} className="btn-gold text-body font-light">Gửi Đánh Giá</button>
             </div>
           </div>
         </div>
@@ -209,12 +209,12 @@ const Collections = () => {
       {/* Try-On CTA */}
       <section className="py-20 bg-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground">Trải Nghiệm Thử Vòng Cổ</h2>
-          <p className="font-body text-primary-foreground/70 mt-4 max-w-xl mx-auto">
+          <h2 className="font-display text-title font-bold text-primary-foreground">Trải Nghiệm Thử Vòng Cổ</h2>
+          <p className="font-body text-primary-foreground/70 mt-4 max-w-xl mx-auto text-body font-light">
             Tải ảnh của bạn lên và thử ngay các mẫu vòng cổ yêu thích. Xem trước khi mua để chắc chắn bạn đã chọn đúng!
           </p>
           <Link to="/thu-vong-co">
-            <button className="btn-gold mt-8 flex items-center gap-2 mx-auto text-sm">
+            <button className="btn-gold mt-8 flex items-center gap-2 mx-auto text-body font-light">
               Thử Ngay Miễn Phí <ArrowRight className="w-4 h-4" />
             </button>
           </Link>
@@ -244,14 +244,14 @@ const CollectionsCarousel = ({ products, onAddToCart
                   <img src={col.image} alt={col.name} className="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-110" />
                 </Link>
                 <div className="mt-4 text-center">
-                  <h3 className="font-display text-lg font-semibold">{col.name}</h3>
-                  <p className="mt-1 text-base font-mono text-primary font-semibold">{col.priceDisplay}</p>
+                  <h3 className="font-display text-subtitle font-semibold">{col.name}</h3>
+                  <p className="mt-1 text-body font-mono text-primary font-semibold">{col.priceDisplay}</p>
                   <div className="grid grid-cols-2 gap-2">
-                    <button onClick={() => onAddToCart(col)} className="btn-outline-gold text-xs px-4 py-2 w-full">
+                    <button onClick={() => onAddToCart(col)} className="btn-outline-gold text-body px-4 py-2 w-full font-light">
                       <ShoppingCart className="w-3 h-3 inline mr-1" /> Thêm Vào Giỏ
                     </button>
                     <Link to="/thu-vong-co?camera=1" className="w-full">
-                      <button className="btn-gold text-xs px-4 py-2 w-full">✨ Thử Ngay</button>
+                      <button className="btn-gold text-body px-4 py-2 w-full font-light">✨ Thử Ngay</button>
                     </Link>
                   </div>
                 </div>
@@ -291,8 +291,8 @@ const ReviewsCarousel = ({ reviews }: {reviews: {name: string;text: string;ratin
                 <Star key={j} className="w-5 h-5 fill-primary text-primary" />
                 )}
                 </div>
-                <h3 className="font-display text-xl font-semibold mb-2">{review.name}</h3>
-                <p className="font-body text-sm text-muted-foreground leading-relaxed">{review.text}</p>
+                <h3 className="font-display text-subtitle font-semibold mb-2">{review.name}</h3>
+                <p className="font-body text-body text-muted-foreground leading-relaxed font-light">{review.text}</p>
               </div>
             </div>
           )}
